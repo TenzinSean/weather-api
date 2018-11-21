@@ -41,17 +41,25 @@ class App extends React.Component {
           <div className="row justify-content-center">
             <div className="col-sm-8 col-md-8 col-lg-8">
               <Title />
-              <Form getWeather={this.getWeather}/>
-              <Weather
-                temperture={this.state.temperture}
-                city={this.state.city}
-                country={this.state.country}
-                humidity={this.state.humidity}
-                description={this.state.description}
-                error={this.state.error}/>
+              </div>
             </div>
-          </div>
-        </div>
+            <div className="row justify-content-center">
+              <div className="col-sm-6 col-md-6 col-lg-6">
+                <Form getWeather={this.getWeather}/>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-sm-6 col-md-6 col-lg-6">
+                <Weather
+                  temperture={this.state.temperture}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}/>
+              </div>
+            </div>
+            </div>
     );
   }
 };
